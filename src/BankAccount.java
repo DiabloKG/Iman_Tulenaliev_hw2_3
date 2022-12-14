@@ -11,7 +11,7 @@ public class BankAccount {
 
     public void withDraw(int sum) throws LimitException {
         if (this.amount < sum) {
-            throw new LimitException("Недостаточно средств для списания", this.amount);
+            throw new LimitException("Недостаточно средств для списания, будет списано: " + this.amount , this.amount);
         }
         this.amount = this.amount - sum;
     }

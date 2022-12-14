@@ -7,6 +7,7 @@ public class Main {
                 bankAccount.withDraw(6000);
                 System.out.println(bankAccount.getAmount());
             } catch (LimitException limitException) {
+                System.out.println(limitException.getMessage());
                 bankAccount.withDraw((int) bankAccount.getAmount());
                 System.out.println(bankAccount.getAmount());
                 break;
